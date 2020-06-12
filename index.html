@@ -13,10 +13,30 @@
         text-decoration: none;
         outline: none;
     }
+    .vid2{
+        border-radius : none !important;
+    }
+    .video{
+        border-radius: 0;
+    }
     body{
         background-color: rgb(238, 238, 238);
         position: fixed;
         z-index: -1;
+    }
+    video{
+        z-index: 1000;
+        border-radius: 2em;
+    }
+    .vid2{
+        border-radius: none;
+    }
+    img{
+        z-index: 1000 !important;
+
+    }
+    a{
+        z-index: 1000;
     }
     .Title{
         background-color: white;
@@ -34,13 +54,15 @@
         z-index: 15px;
     }
     .center{
+        display: flex;
+        flex-direction: column;
         margin-left: 30%;
         margin-right: 30%;
         border-bottom: black solid 2px;
         color: black;
         box-shadow: 2px 0px 0px rgba(1,1,1,0.5), -2px 0px 0px  rgba(1,1,1,0.5);
         background-color: white;
-        z-index: 15;
+        z-index: 999;
         }
         .centerx{
         margin-left: 30%;
@@ -103,6 +125,9 @@
         background-color: rgba(0,0,0,0.8);
         z-index: 18;
         outline: none;
+    }
+    #video2{
+        border-radius: none;
     }
     .cont{
         position: fixed;
@@ -216,6 +241,9 @@
     .pew{
         z-index: 16;
     }
+    .vid2{
+        border-radius : none !important;
+    }
     @media only screen and (max-width:800px) and (min-width: 0px){
         .left{
             display: none;
@@ -248,7 +276,9 @@
             border-bottom-right-radius: none;
             box-shadow: none;
         }
-
+        video{
+            border-radius: 0;
+        }
     }
 </style>
 <body>
@@ -266,7 +296,7 @@
         </div>
         <br>
         <center>
-           <video class="pew" width="100%"  controls >
+           <video class="pew" width="100%" controls >
                <source src="n.mp4" type="video/mp4">
            </video>
         </center>
@@ -360,7 +390,7 @@
             </div>
             <br>
             <center>
-            <video width="100%" id="video2" controls>
+            <video width="100%" id="video2" class="video" controls>
                 <source src="fa.mp4" type="video/mp4">
             </video>
         <br>
